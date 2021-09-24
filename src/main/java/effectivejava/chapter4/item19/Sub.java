@@ -21,3 +21,8 @@ public final class Sub extends Super {
         sub.overrideMe();
     }
 }
+/**
+ * output: 超类的构造器在子类的构造器之前运行
+ * null
+ * 2021-09-23T06:00:26.800864600Z
+ */

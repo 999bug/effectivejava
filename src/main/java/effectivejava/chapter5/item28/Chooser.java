@@ -15,6 +15,7 @@ public class Chooser<T> {
     }
 
     public T choose() {
+        // TODO: 2021/9/24 ThreadLocalRandom.current() 在线程内部生成随机数
         Random rnd = ThreadLocalRandom.current();
         return choiceList.get(rnd.nextInt(choiceList.size()));
     }

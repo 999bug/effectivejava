@@ -4,6 +4,7 @@ import java.lang.reflect.*;
 
 // Use of asSubclass to safely cast to a bounded type token (Page 155)
 public class PrintAnnotation {
+
     static Annotation getAnnotation(AnnotatedElement element,
                                     String annotationTypeName) {
         Class<?> annotationType = null; // Unbounded type token

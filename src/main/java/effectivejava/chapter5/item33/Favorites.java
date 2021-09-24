@@ -3,6 +3,7 @@ import java.util.*;
 
 // Typesafe heterogeneous container pattern (Pages 151-4)
 public class Favorites {
+
     private Map<Class<?>, Object> favorites = new HashMap<>();
 
     public <T> void putFavorite(Class<T> type, T instance) {
@@ -21,6 +22,7 @@ public class Favorites {
     public static void main(String[] args) {
         Favorites f = new Favorites();
         f.putFavorite(String.class, "Java");
+        f.putFavorite(String.class, "Jav1");
         f.putFavorite(Integer.class, 0xcafebabe);
         f.putFavorite(Class.class, Favorites.class);
         String favoriteString = f.getFavorite(String.class);
@@ -28,5 +30,6 @@ public class Favorites {
         Class<?> favoriteClass = f.getFavorite(Class.class);
         System.out.printf("%s %x %s%n", favoriteString,
                 favoriteInteger, favoriteClass.getName());
+        System.out.println("ok");
     }
 }
